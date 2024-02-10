@@ -4,8 +4,15 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rand = "0.8.5"
+tokio = { version = "1.35.1", features = ["full"] }
+tokio-tungstenite = { version = "*", features = ["native-tls"] }
+crossterm = { version = "0.27.0", features = ["event-stream"] }
 secp256k1 = { version = "0.28.1", features = ["rand-std", "hashes"] }
 serde = { version = "1.0", features = ["derive"] }
+futures-util = "0.3.30"
+rand = "0.8.5"
+hex = "0.4.3"
 serde_json = "1.0.111"
 anyhow = "1.0.79"
+ratatui = "0.26.0"
+futures = "0.3.30"
